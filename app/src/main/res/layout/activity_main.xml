@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ButtonColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BCBCBC"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/mCameraButton"
+        style="@style/ButtonColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#E3673F"
+        android:elevation="10dp"
+        android:text="@string/buttonTakePhoto"
+        app:layout_constraintBottom_toTopOf="@+id/mPhotoImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mGalleryButton" />
+
+
+    <Button
+        android:id="@+id/mGalleryButton"
+        style="@style/ButtonColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#EACEAA"
+        android:elevation="5dp"
+        android:text="@string/buttonSelectPhoto"
+        app:layout_constraintBottom_toTopOf="@+id/mPhotoImageView"
+        app:layout_constraintEnd_toStartOf="@+id/mCameraButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mPhotoImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="27dp"
+        android:contentDescription="@string/descriptionImage"
+        app:layout_constraintBottom_toTopOf="@+id/mDetectButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mGalleryButton"
+        app:srcCompat="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/mDetectButton"
+        style="@style/ButtonColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#F1617D"
+        android:text="@string/buttonDiagnose"
+        app:layout_constraintBottom_toTopOf="@+id/mResultTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mPhotoImageView" />
+
+    <TextView
+        android:id="@+id/mResultTextView"
+        android:layout_width="345dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/defaultImage"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mDetectButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
